@@ -14,3 +14,4 @@ iptables -t nat -A PREROUTING -p udp -m udp --dport $[portup + i] -j DNAT --to-d
 iptables -t nat -A POSTROUTING -d ${strs[i]} -p tcp -m tcp --dport $port -j SNAT --to-source $ip
 iptables -t nat -A POSTROUTING -d ${strs[i]} -p udp -m udp --dport $port -j SNAT --to-source $ip
 done
+service iptables save
