@@ -20,6 +20,9 @@ iptables -t nat -A POSTROUTING -d ${strs[i]} -p tcp -m tcp --dport $port -j SNAT
 iptables -t nat -A POSTROUTING -d ${strs[i]} -p udp -m udp --dport $port -j SNAT --to-source $ip
 done
 echo "成功添加 $i 个转发 IP"
+iptables -I INPUT -p tcp --dport $[portup]:$[portup + i] -j ACCEPT
+echo "端口已开放 $[portup]:$[portup + i]"
+
 iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
 service iptables save
