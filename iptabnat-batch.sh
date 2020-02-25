@@ -23,3 +23,8 @@ echo "成功添加 $i 个转发 IP"
 iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
 service iptables save
+systemctl enable iptables.service
+systemctl stop iptables
+systemctl start iptables
+systemctl restart iptables
+systemctl reload iptables
