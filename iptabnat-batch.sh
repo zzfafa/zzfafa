@@ -19,7 +19,7 @@ iptables -t nat -A PREROUTING -p udp -m udp --dport $[portup + i] -j DNAT --to-d
 iptables -t nat -A POSTROUTING -d ${strs[i]} -p tcp -m tcp --dport $port -j SNAT --to-source $ip
 iptables -t nat -A POSTROUTING -d ${strs[i]} -p udp -m udp --dport $port -j SNAT --to-source $ip
 done
--A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport &portup:$[portup + i] -j ACCEPT
+-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport $portup:$[portup + i] -j ACCEPT
 echo "成功添加 $i 个转发 IP"
 iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
