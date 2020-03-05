@@ -25,11 +25,4 @@ echo "成功添加 $i 个转发 IP"
 #iptables -I INPUT -p tcp --dport $[portup]:$[portup + i] -j ACCEPT
 #echo "端口已开放 $[portup]:$[portup + i]"
 
-iptables -P INPUT ACCEPT
-iptables -P OUTPUT ACCEPT
 service iptables save
-systemctl enable iptables.service
-systemctl stop iptables
-systemctl start iptables
-systemctl restart iptables
-systemctl reload iptables
