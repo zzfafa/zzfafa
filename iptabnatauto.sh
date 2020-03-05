@@ -1,8 +1,10 @@
 #!/bin/bash
-read -p "本地起始端口：" portup
+#read -p "本地起始端口：" portup
 read -p "内网 NAT 地址：" ip
-read -p "远程转发端口：" port
-read -p "清空现在所有转发的 IP (y/n 默认 n )：" delall
+#read -p "远程转发端口：" port
+#read -p "清空现在所有转发的 IP (y/n 默认 n )：" delall
+portup="46001"
+port="443"
 wget -O iplist.txt https://raw.githubusercontent.com/zzfafa/zzfafa/master/iplist
 str=$(cat iplist.txt)
 OLD_IFS="$IFS"
