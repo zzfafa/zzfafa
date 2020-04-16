@@ -29,5 +29,5 @@ echo "成功添加 $i 个转发 IP"
 #echo "端口已开放 $[portup]:$[portup + i]"
 
 service iptables save
-systemctl restart iptables.service
-systemctl status iptables.service
+#systemctl restart iptables.service
+#systemctl status iptables.service
