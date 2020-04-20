@@ -6,8 +6,9 @@
 portup=23001
 port=443
 ip=10.0.0.4
-wget -O iplist.txt https://raw.githubusercontent.com/zzfafa/zzfafa/master/iplist
-str=$(cat iplist.txt)
+#wget -O iplist.txt https://raw.githubusercontent.com/zzfafa/zzfafa/master/iplist
+str=23.99.112.18,23.99.106.177,23.99.107.138,23.99.114.57,23.99.120.225,52.175.51.184,52.175.51.210,52.175.54.235,52.175.49.89,52.175.53.142,52.175.54.66,13.70.56.26,52.184.34.57,52.175.120.44,52.175.127.219,23.99.112.56,168.63.155.194,168.63.155.200,23.98.42.68,168.63.152.171
+#$(cat iplist.txt)
 OLD_IFS="$IFS"
 IFS="," 
 strs=($str)
