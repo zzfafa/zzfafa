@@ -1,8 +1,8 @@
 #!/bin/bash
-read -p "本地起始端口：" portup
-read -p "内网 NAT 地址：" ip
-read -p "远程转发端口：" port
-read -p "清空现在所有转发的 IP (y/n 默认 n )：" delall
+#read -p "本地起始端口：" portup
+#read -p "内网 NAT 地址：" ip
+#read -p "远程转发端口：" port
+#read -p "清空现在所有转发的 IP (y/n 默认 n )：" delall
 portup=23001
 port=443
 ip=10.0.0.4
